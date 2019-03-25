@@ -7,14 +7,18 @@
   "license": "CC-BY-NC-ND+GNU GPL v3",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 4040",
     "build": "next build",
-    "start": "next start"
+    "dev": "next dev -p 4040",
+    "export": "next export",
+    "serve": "serve -p 4040 ./out"
   },
   "dependencies": {
     "express": "4.16.4",
     "next": "8.0.3",
     "react": "16.8.4",
     "react-dom": "16.8.4"
+  },
+  "devDependencies": {
+    "serve": "10.1.2"
   }
 }
