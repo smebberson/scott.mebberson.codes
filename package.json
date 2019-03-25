@@ -1,0 +1,20 @@
+{
+  "name": "scott.mebberson.codes",
+  "version": "1.0.0",
+  "description": "A blog by Scott Mebberson.",
+  "repository": "https://github.com/smebberson/scott.mebberson.codes.git",
+  "author": "Scott Mebberson <scott@scottmebberson.com>",
+  "license": "CC-BY-NC-ND+GNU GPL v3",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 4040",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "express": "4.16.4",
+    "next": "8.0.3",
+    "react": "16.8.4",
+    "react-dom": "16.8.4"
+  }
+}
