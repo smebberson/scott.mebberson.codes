@@ -2,9 +2,7 @@ import Head from 'next/head';
 
 import Header from './Header';
 
-export default (props) => {
-
-    const title = props.title || 'scott.mebberson.codes';
+export default ({ children, title = 'scott.mebberson.codes', ...props }) => {
 
     return (
 
@@ -15,11 +13,11 @@ export default (props) => {
             </Head>
             
     
-            <div>
+            <div { ...props }>
     
                 <Header title={ title } />
             
-                { props.children }
+                { children }
     
             </div>
     
@@ -31,7 +29,11 @@ export default (props) => {
                     text-transform: uppercase;
                     letter-spacing: 2px;
                 }
-    
+   
+                div {
+                    margin-bottom: 5em;
+                }
+
             ` }</style>
     
             <style global jsx>{ `
