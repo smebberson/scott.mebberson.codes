@@ -9,6 +9,8 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev -p 4040",
+    "docker:build": "docker build --tag smc:latest ./.action",
+    "docker:run": "docker run --rm --volume ~/Developer/scott.mebberson.codes/:/github/workspace --workdir /github/workspace smc:latest",
     "export": "next export",
     "serve": "serve -p 4040 ./out"
   },
