@@ -1,8 +1,21 @@
 workflow "Publish" {
   on = "push"
-  resolves = ["Build"]
+  resolves = ["Setup", "Build", "Export"]
+}
+
+action "Setup" {
+  uses = "./yarn"
+  args = ["install"]
 }
 
 action "Build" {
-  uses = "./build"
+  needs = "Setup"
+  uses = "./next"
+  args = ["build"]
+}
+
+action "Export" {
+  needs = "Build"
+  uses = "./next"
+  args = ["export"]
 }
