@@ -1,28 +1,28 @@
-workflow "Publish" {
+workflow "Build, export and publish" {
   on = "push"
   resolves = ["Slack notification"]
 }
 
-action "Master" {
-  uses = "actions/bin/filter@master"
-  args = "branch master"
-}
+# action "Master" {
+#   uses = "actions/bin/filter@master"
+#   args = "branch master"
+# }
 
 action "Setup" {
-  needs = "Master"
-  uses = "./yarn"
+  # needs = "Master"
+  uses = "./actions/yarn"
   args = ["install"]
 }
 
 action "Build" {
   needs = "Setup"
-  uses = "./next"
+  uses = "./actions/next"
   args = ["build"]
 }
 
 action "Export" {
   needs = "Build"
-  uses = "./next"
+  uses = "./actions/next"
   args = ["export"]
 }
 
