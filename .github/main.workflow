@@ -1,6 +1,6 @@
 workflow "Publish" {
   on = "push"
-  resolves = ["Export"]
+  resolves = ["Slack notification"]
 }
 
 action "Master" {
