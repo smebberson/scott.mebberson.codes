@@ -4,5 +4,5 @@ workflow "Publish" {
 }
 
 action "Build" {
-  uses = "./publish"
+  uses = "./build"
 }
