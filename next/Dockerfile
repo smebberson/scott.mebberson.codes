@@ -1,9 +1,9 @@
 FROM smebberson/alpine-nodejs:8.1.0
 
-LABEL "com.github.actions.name"="Build"
-LABEL "com.github.actions.description"="Build the latest version of scott.mebberson.codes"
-LABEL "com.github.actions.icon"="play"
-LABEL "com.github.actions.color"="purple"
+LABEL "com.github.actions.name"="Next"
+LABEL "com.github.actions.description"="Use Yarn in a GitHub action"
+LABEL "com.github.actions.icon"="book"
+LABEL "com.github.actions.color"="orange"
 
 LABEL "repository"="https://github.com/smebberson/scott.mebberson.codes"
 LABEL "homepage"="https://github.com/smebberson/scott.mebberson.codes"
