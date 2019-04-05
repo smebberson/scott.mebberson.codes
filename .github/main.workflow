@@ -1,13 +1,15 @@
 workflow "Publish" {
   on = "push"
-  resolves = [
-    "Setup",
-    "Build",
-    "Slack notification",
-  ]
+  resolves = ["Export"]
+}
+
+action "Master" {
+  uses = "actions/bin/filter@master"
+  args = "branch master"
 }
 
 action "Setup" {
+  needs = "Master"
   uses = "./yarn"
   args = ["install"]
 }
