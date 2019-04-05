@@ -2,5 +2,6 @@
 
 set -eu
 
+yarn
 yarn build
 yarn export

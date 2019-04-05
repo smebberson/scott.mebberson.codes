@@ -9,8 +9,8 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev -p 4040",
-    "docker:build": "docker build --tag smc:latest ./.action",
-    "docker:run": "docker run --rm --volume ~/Developer/scott.mebberson.codes/:/github/workspace --workdir /github/workspace smc:latest",
+    "docker:build": "docker build --tag smc:latest publish",
+    "docker:run": "docker run -v ~/Developer/scott.mebberson.codes/components:/github/workspace/components -v ~/Developer/scott.mebberson.codes/lib:/github/workspace/lib -v ~/Developer/scott.mebberson.codes/pages:/github/workspace/pages -v ~/Developer/scott.mebberson.codes/next.config.js:/github/workspace/next.config.js -v ~/Developer/scott.mebberson.codes/package.json:/github/workspace/package.json -v ~/Developer/scott.mebberson.codes/posts.js:/github/workspace/posts.js -v ~/Developer/scott.mebberson.codes/yarn.lock:/github/workspace/yarn.lock --rm --workdir /github/workspace smc:latest",
     "export": "next export",
     "serve": "serve -p 4040 ./out"
   },
