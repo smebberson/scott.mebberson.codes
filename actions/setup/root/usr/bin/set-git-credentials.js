@@ -6,10 +6,10 @@ const fs = require('fs');
 const path = require('path');
 
 const [,, remote] = process.argv;
-const { GITHUB_TOKEN, HOME } = process.env;
+const { GH_TOKEN, HOME } = process.env;
 const file = path.join(HOME, '.git-credentials');
 
-const remoteWithCredentials = remote.replace('https://', `https://smebberson:${GITHUB_TOKEN}@`);
+const remoteWithCredentials = remote.replace('https://', `https://smebberson:${GH_TOKEN}@`);
 
 fs.writeFile(file, remoteWithCredentials, (err) => {
 

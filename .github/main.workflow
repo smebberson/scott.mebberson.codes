@@ -12,11 +12,6 @@ action "Setup" {
   # needs = "Master"
   uses = "./actions/setup"
   secrets = ["GH_TOKEN"]
-
-  # action "Master" {
-  #   uses = "actions/bin/filter@master"
-  #   args = "branch master"
-  # }
 }
 
 action "Build" {
