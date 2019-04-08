@@ -9,14 +9,16 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev -p 4040",
-    "action:next:build": "docker build --tag smc-next:latest next",
-    "action:yarn:build": "docker build --tag smc-yarn:latest yarn",
+    "action:next:build": "docker build --tag smc-next:latest actions/next",
+    "action:publish:build": "docker build --tag smc-publish:latest actions/publish",
+    "action:yarn:build": "docker build --tag smc-yarn:latest actions/yarn",
     "export": "next export",
     "serve": "serve -p 4040 ./out",
-    "workflow": "yarn run-s workflow:step:setup workflow:step:build workflow:step:export",
+    "workflow": "yarn run-s workflow:step:build workflow:step:export workflow:step:publish",
     "workflow:step:setup": "docker run -v ~/Developer/scott.mebberson.codes:/github/workspace --rm --workdir /github/workspace smc-yarn:latest install",
     "workflow:step:build": "docker run -v ~/Developer/scott.mebberson.codes:/github/workspace --rm --workdir /github/workspace smc-next:latest build",
-    "workflow:step:export": "docker run -v ~/Developer/scott.mebberson.codes:/github/workspace --rm --workdir /github/workspace smc-next:latest export"
+    "workflow:step:export": "docker run -v ~/Developer/scott.mebberson.codes:/github/workspace --rm --workdir /github/workspace smc-next:latest export",
+    "workflow:step:publish": "docker run -e GITHUB_WORKSPACE=/github/workspace -v ~/Developer/scott.mebberson.codes:/github/workspace --rm --workdir /github/workspace smc-publish:latest"
   },
   "dependencies": {
     "express": "4.16.4",
