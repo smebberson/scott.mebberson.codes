@@ -10,8 +10,7 @@ workflow "Build, export and publish" {
 
 action "Setup" {
   # needs = "Master"
-  uses = "./actions/yarn"
-  args = ["install"]
+  uses = "./actions/setup"
 }
 
 action "Build" {
