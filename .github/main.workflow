@@ -3,13 +3,13 @@ workflow "Build, export and publish" {
   resolves = ["Slack notification"]
 }
 
-# action "Master" {
-#   uses = "actions/bin/filter@master"
-#   args = "branch master"
-# }
+action "On master only" {
+  uses = "actions/bin/filter@master"
+  args = "branch master"
+}
 
 action "Setup" {
-  # needs = "Master"
+  needs = "On master only"
   uses = "./actions/setup"
   secrets = ["GH_TOKEN"]
 }
