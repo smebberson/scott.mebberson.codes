@@ -9,10 +9,16 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev -p 4040",
-    "docker:build": "docker build --tag smc:latest ./.action",
-    "docker:run": "docker run --rm --volume ~/Developer/scott.mebberson.codes/:/github/workspace --workdir /github/workspace smc:latest",
+    "action:next:build": "docker build --tag smc-next:latest actions/next",
+    "action:publish:build": "docker build --tag smc-publish:latest actions/publish",
+    "action:setup:build": "docker build --tag smc-setup:latest actions/setup",
     "export": "next export",
-    "serve": "serve -p 4040 ./out"
+    "serve": "serve -p 4040 ./out",
+    "workflow": "yarn run-s workflow:step:build workflow:step:export workflow:step:publish",
+    "workflow:step:setup": "docker run -v ~/Developer/scott.mebberson.codes:/github/workspace --rm --workdir /github/workspace smc-setup:latest",
+    "workflow:step:build": "docker run -v ~/Developer/scott.mebberson.codes:/github/workspace --rm --workdir /github/workspace smc-next:latest build",
+    "workflow:step:export": "docker run -v ~/Developer/scott.mebberson.codes:/github/workspace --rm --workdir /github/workspace smc-next:latest export",
+    "workflow:step:publish": "docker run -e GITHUB_WORKSPACE=/github/workspace -v ~/Developer/scott.mebberson.codes:/github/workspace --rm --workdir /github/workspace smc-publish:latest"
   },
   "dependencies": {
     "express": "4.16.4",
@@ -22,6 +28,7 @@
     "react-syntax-highlighter": "10.2.1"
   },
   "devDependencies": {
+    "npm-run-all": "4.1.5",
     "serve": "10.1.2"
   }
 }
