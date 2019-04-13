@@ -28,6 +28,14 @@ export default () => (
 
                 <li>
 
+                    <Link href="/cheat-sheets">
+                        <a>Cheat Sheets</a>
+                    </Link>
+
+                </li>
+
+                <li>
+
                     <Link href="/about">
                         <a>About</a>
                     </Link>
