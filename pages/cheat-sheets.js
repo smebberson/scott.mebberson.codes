@@ -14,8 +14,15 @@ const Cheatsheets = () => (
                 <Column width="100%">
 
                     <CheatSheetTeaser
-                        title="Docker"
+                        color="#2396ED"
                         href="/cheat-sheet/docker"
+                        title="Docker"
+                    />
+
+                    <CheatSheetTeaser
+                        color="#F05033"
+                        href="/cheat-sheet/git"
+                        title="Git"
                     />
 
                 </Column>
