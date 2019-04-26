@@ -13,6 +13,10 @@ export default ({ caption, code }) => {
                     width: 100%;
                 }
 
+                p {
+                    margin-bottom: 2.6em;
+                }
+
             ` }</style>
         </div>
     );
