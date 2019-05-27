@@ -25,6 +25,12 @@ const Cheatsheets = () => (
                         title="Git"
                     />
 
+                    <CheatSheetTeaser
+                        color="#15C213"
+                        href="/cheat-sheet/jest"
+                        title="Jest"
+                    />
+
                 </Column>
 
             </Columns>
