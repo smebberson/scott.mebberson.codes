@@ -1,10 +1,10 @@
-
 import CheatSheet from '../../components/CheatSheet';
 import Cheat from '../../components/Cheat';
+import { jest } from '../../lib/colours';
 
 export default () => (
     <CheatSheet
-        color="#15C213"
+        color={jest}
         title="Jest"
     >
         

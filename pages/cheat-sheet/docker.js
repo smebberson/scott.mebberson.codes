@@ -1,10 +1,11 @@
 
 import CheatSheet from '../../components/CheatSheet';
 import Cheat from '../../components/Cheat';
+import { docker } from '../../lib/colours';
 
 export default () => (
     <CheatSheet
-        color="#2396ED"
+        color={ docker }
         title="Docker"
     >
         

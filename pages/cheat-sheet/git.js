@@ -1,10 +1,10 @@
-
 import CheatSheet from '../../components/CheatSheet';
 import Cheat from '../../components/Cheat';
+import { git } from '../../lib/colours';
 
 export default () => (
     <CheatSheet
-        color="#F05033"
+        color={git}
         title="Git"
     >
 

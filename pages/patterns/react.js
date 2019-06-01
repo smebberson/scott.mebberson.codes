@@ -1,11 +1,11 @@
-
 import Heading from '../../components/Heading';
 import Page from '../../components/Page';
 import Pattern from '../../components/Pattern';
+import { react } from '../../lib/colours';
 
 export default () => (
     <Page
-        color="#60DAFB"
+        color={react}
         title="React"
     >
         

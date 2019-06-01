@@ -2,6 +2,7 @@ import CheatSheetTeaser from '../components/CheatSheetTeaser';
 import Column from '../components/Column';
 import Columns from '../components/Columns';
 import Layout from '../components/Layout';
+import { docker, git, jest } from '../lib/colours';
 
 const Cheatsheets = () => (
 
@@ -14,19 +15,19 @@ const Cheatsheets = () => (
                 <Column width="100%">
 
                     <CheatSheetTeaser
-                        color="#2396ED"
+                        color={docker}
                         href="/cheat-sheet/docker"
                         title="Docker"
                     />
 
                     <CheatSheetTeaser
-                        color="#F05033"
+                        color={git}
                         href="/cheat-sheet/git"
                         title="Git"
                     />
 
                     <CheatSheetTeaser
-                        color="#15C213"
+                        color={jest}
                         href="/cheat-sheet/jest"
                         title="Jest"
                     />
