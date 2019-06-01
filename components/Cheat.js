@@ -1,24 +1,3 @@
-export default ({ caption, code }) => {
+import Code from './Code';
 
-    return (
-        <div>
-            <code>{ code }</code>
-            <p>{ caption }</p>
-            <style jsx>{ `
-
-                code {
-                    background: #F8F8FC;
-                    display: block;
-                    padding: 10px;
-                    width: 100%;
-                }
-
-                p {
-                    margin-bottom: 2.6em;
-                }
-
-            ` }</style>
-        </div>
-    );
-
-};
+export default Code;
