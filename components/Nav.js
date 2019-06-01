@@ -36,6 +36,14 @@ export default () => (
 
                 <li>
 
+                    <Link href="/patterns">
+                        <a>Patterns</a>
+                    </Link>
+
+                </li>
+
+                <li>
+
                     <Link href="/about">
                         <a>About</a>
                     </Link>
