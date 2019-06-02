@@ -2,6 +2,10 @@
 
 This changelog represents changes to the website code, not the content.
 
+## 2019-06-02
+
+- Added a React cheat sheet.
+
 ## 2019-06-01
 
 - Added a patterns section.
