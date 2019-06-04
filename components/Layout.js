@@ -55,6 +55,20 @@ export default ({ children, title = 'scott.mebberson.codes', ...props }) => {
                 .align-center {
                     text-align: center;
                 }
+
+                .code .icon {
+                    position: absolute;
+                    left: -30px;
+                    top: 5px
+                }
+
+                .code .icon.good {
+                    color: #89C472;
+                }
+
+                .code .icon.bad {
+                    color: #FC6C85;
+                }
     
             ` }</style>
             

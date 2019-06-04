@@ -2,6 +2,10 @@
 
 This changelog represents changes to the website code, not the content.
 
+## 2019-06-04
+
+- The Code component can now be used to indicate examples of good code (👍), or bad code (👎).
+
 ## 2019-06-02
 
 - Added a React cheat sheet.

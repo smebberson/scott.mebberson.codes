@@ -21,6 +21,9 @@
     "workflow:step:publish": "docker run -e GITHUB_WORKSPACE=/github/workspace -v ~/Developer/scott.mebberson.codes:/github/workspace --rm --workdir /github/workspace smc-publish:latest"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "1.2.18",
+    "@fortawesome/free-solid-svg-icons": "5.8.2",
+    "@fortawesome/react-fontawesome": "0.1.4",
     "express": "4.16.4",
     "next": "8.0.3",
     "react": "16.8.4",
