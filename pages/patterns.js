@@ -2,6 +2,7 @@ import Column from '../components/Column';
 import Columns from '../components/Columns';
 import Layout from '../components/Layout';
 import Teaser from '../components/Teaser';
+import { javascript, react } from '../lib/colours';
 
 const Patterns = () => (
 
@@ -14,9 +15,15 @@ const Patterns = () => (
                 <Column width="100%">
 
                     <Teaser
-                        color="#60DAFB"
+                        color={react}
                         href="/patterns/react"
                         title="React"
+                    />
+
+                    <Teaser
+                        color={javascript}
+                        href="/patterns/javascript"
+                        title="JavaScript"
                     />
 
                 </Column>

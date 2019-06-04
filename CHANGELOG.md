@@ -5,6 +5,7 @@ This changelog represents changes to the website code, not the content.
 ## 2019-06-04
 
 - The Code component can now be used to indicate examples of good code (👍), or bad code (👎).
+- Added a SubHeading component.
 
 ## 2019-06-02
 
