@@ -10,6 +10,7 @@ export default ({ children, title = 'scott.mebberson.codes', ...props }) => {
     
             <Head>
                 <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Libre+Barcode+128|Open+Sans:300,400,700" rel="stylesheet" />
+                <script src='https://embed.runkit.com'></script>
             </Head>
             
     
@@ -58,8 +59,12 @@ export default ({ children, title = 'scott.mebberson.codes', ...props }) => {
 
                 .code .icon {
                     position: absolute;
-                    left: -30px;
+                    left: -25px;
                     top: 5px
+                }
+
+                .code.with-runkit .icon {
+                    left: -40px;
                 }
 
                 .code .icon.good {

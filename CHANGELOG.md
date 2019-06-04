@@ -6,6 +6,7 @@ This changelog represents changes to the website code, not the content.
 
 - The Code component can now be used to indicate examples of good code (👍), or bad code (👎).
 - Added a SubHeading component.
+- The Code component can now optionally embed the code in a RunKit wrapper.
 
 ## 2019-06-02
 

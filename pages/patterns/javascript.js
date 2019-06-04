@@ -23,7 +23,7 @@ export default () => (
 const multiply = (a = 1, b = 1) => {
 
     if (a === 0 || b === 0) {
-        throw new Error('You can\'t multiple by zero.');
+        throw new Error(\`You can't multiple by zero.\`);
     }
 
     return Promise.resolve(a * b);
@@ -44,6 +44,7 @@ try {
             `}
             language="javascript"
             rating="bad"
+            runkit
         />
 
         <p>Consider refactoring functions that use <Inline>Promise.resolve()</Inline> (with or without a try/catch block).</p>
@@ -54,7 +55,7 @@ try {
 const multiply = (a = 1, b = 1) => new Promise((resolve) => {
 
     if (a === 0 || b === 0) {
-        throw new Error('You can\'t multiple by zero.');
+        throw new Error(\`You can't multiple by zero.\`);
     }
 
     return resolve(a * b);
@@ -69,6 +70,7 @@ multiply(10, 0)
             `}
             language="javascript"
             rating="good"
+            runkit
         />
         
     </Page>
