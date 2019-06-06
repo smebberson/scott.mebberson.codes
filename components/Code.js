@@ -11,25 +11,28 @@ SyntaxHighlighter.registerLanguage('bash', bash);
 SyntaxHighlighter.registerLanguage('jsx', jsx);
 SyntaxHighlighter.registerLanguage('javascript', javascript);
 
-export default ({ caption, code, language = 'shell', rating = '', runkit = false }) => {
-
+export default ({
+    caption,
+    code,
+    language = 'shell',
+    rating = '',
+    runkit = false
+}) => {
     return (
         <div className={`code ${runkit ? 'with-runkit' : ''}`}>
-            { runkit &&
-                <RunKit source={code.trim()} />
-            }
-            { runkit ||
-                <SyntaxHighlighter language={language} style={style}>{code.trim()}</SyntaxHighlighter>
-            }
-            { caption &&
-                <p>{caption}</p>
-            }
-            { rating === 'good' &&
-                <FontAwesomeIcon className="icon good" icon={faThumbsUp}></FontAwesomeIcon>
-            }
-            { rating === 'bad' &&
-                <FontAwesomeIcon className="icon bad" icon={faThumbsDown}></FontAwesomeIcon>
-            }
+            {runkit && <RunKit source={code.trim()} />}
+            {runkit || (
+                <SyntaxHighlighter language={language} style={style}>
+                    {code.trim()}
+                </SyntaxHighlighter>
+            )}
+            {caption && <p>{caption}</p>}
+            {rating === 'good' && (
+                <FontAwesomeIcon className="icon good" icon={faThumbsUp} />
+            )}
+            {rating === 'bad' && (
+                <FontAwesomeIcon className="icon bad" icon={faThumbsDown} />
+            )}
             <style jsx>{`
                 .code {
                     position: relative;
@@ -41,5 +44,4 @@ export default ({ caption, code, language = 'shell', rating = '', runkit = false
             `}</style>
         </div>
     );
-
 };

@@ -6,6 +6,6 @@ module.exports = {
             slug: 'next-js-on-gh-pages',
             teaser: 'A simple guide to hosting a Next.js site on GitHub pages.',
             title: 'Next.js on gh-pages'
-        },
-    ],
+        }
+    ]
 };

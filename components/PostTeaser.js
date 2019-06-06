@@ -3,40 +3,30 @@ import Link from 'next/link';
 import { borderColor } from '../lib/constants';
 
 export default ({ post }) => {
-
     const { color, date, slug, teaser, title } = post;
-    const parts = []
-        .concat(
-            ...title
+    const parts = [].concat(
+        ...title
             .split(' ')
-            .map((part, key) => ([part, React.createElement('br', { key })]))
-        );
+            .map((part, key) => [part, React.createElement('br', { key })])
+    );
 
     return (
         <article>
-
-            <time dateTime={ date }><span>{ date }</span></time>
-
+            <time dateTime={date}>
+                <span>{date}</span>
+            </time>
             <h1>
-
-                <Link href={ `/post/${slug}` }>
-                    <a>{ parts }</a>
+                <Link href={`/post/${slug}`}>
+                    <a>{parts}</a>
                 </Link>
-                
             </h1>
-
-            <p>{ teaser }</p>
-
-            <style jsx>{ `
-
+            <p>{teaser}</p>
+            <style jsx>{`
                 h1 a {
                     color: ${color};
                 }
-
-            ` }</style>
-
-            <style jsx>{ `
-
+            `}</style>
+            <style jsx>{`
                 article {
                     border-bottom: 1px solid ${borderColor};
                     margin-bottom: 3em;
@@ -46,7 +36,7 @@ export default ({ post }) => {
                 h1 {
                     font-family: 'Bungee', sans-serif;
                     font-size: 2em;
-                    margin: .1em 0px .3em 0px;
+                    margin: 0.1em 0px 0.3em 0px;
                     text-align: left;
                 }
 
@@ -57,7 +47,7 @@ export default ({ post }) => {
                 time {
                     color: #999;
                     font-weight: 600;
-                    font-size: .8em;
+                    font-size: 0.8em;
                     position: relative;
                     text-transform: uppercase;
                 }
@@ -69,11 +59,7 @@ export default ({ post }) => {
                     position: absolute;
                     bottom: -6px;
                 }
-
-            ` }</style>
-
+            `}</style>
         </article>
-        
     );
-
 };

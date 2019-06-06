@@ -6,16 +6,16 @@ import SubHeading from '../../components/SubHeading';
 import { javascript } from '../../lib/colours';
 
 export default () => (
-    <Page
-        color={javascript}
-        title="JavaScript"
-    >
-        
+    <Page color={javascript} title="JavaScript">
         <Heading>Promises</Heading>
 
         <SubHeading>Promise executor pattern</SubHeading>
 
-        <p>Use the promise executor pattern to ensure errors are automatically captured and the promise rejected, without requiring additional try/catch blocks.</p>
+        <p>
+            Use the promise executor pattern to ensure errors are automatically
+            captured and the promise rejected, without requiring additional
+            try/catch blocks.
+        </p>
 
         <Pattern
             caption="Could be better written with the promise executor pattern to avoid multiple points of error handling."
@@ -47,7 +47,11 @@ try {
             runkit
         />
 
-        <p>Consider refactoring functions that use <Inline>Promise.resolve()</Inline> (with or without a try/catch block).</p>
+        <p>
+            Consider refactoring functions that use{' '}
+            <Inline>Promise.resolve()</Inline> (with or without a try/catch
+            block).
+        </p>
 
         <Pattern
             caption="The error is automatically captured and the promise rejected, producing a single point for error handling and improving code readability."
@@ -72,6 +76,5 @@ multiply(10, 0)
             rating="good"
             runkit
         />
-        
     </Page>
 );

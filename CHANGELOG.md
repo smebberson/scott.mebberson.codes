@@ -5,6 +5,7 @@ This changelog represents changes to the website code, not the content.
 ## 2019-06-06
 
 - Added a MongoDB cheat sheet.
+- Added Prettier.
 
 ## 2019-06-04
 

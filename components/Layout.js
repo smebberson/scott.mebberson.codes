@@ -1,44 +1,35 @@
 import Head from 'next/head';
-
 import Header from './Header';
 
 export default ({ children, title = 'scott.mebberson.codes', ...props }) => {
-
     return (
-
         <>
-    
             <Head>
-                <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Libre+Barcode+128|Open+Sans:300,400,700" rel="stylesheet" />
-                <script src='https://embed.runkit.com'></script>
+                <link
+                    href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Libre+Barcode+128|Open+Sans:300,400,700"
+                    rel="stylesheet"
+                />
+                <script src="https://embed.runkit.com" />
             </Head>
-            
-    
-            <div { ...props }>
-    
-                <Header title={ title } />
-            
-                { children }
-    
+
+            <div {...props}>
+                <Header title={title} />
+                {children}
             </div>
-    
-    
-            <style jsx>{ `
-    
+
+            <style jsx>{`
                 h1 {
                     font-weight: 600;
                     text-transform: uppercase;
                     letter-spacing: 2px;
                 }
-   
+
                 div {
                     margin-bottom: 5em;
                 }
+            `}</style>
 
-            ` }</style>
-    
-            <style global jsx>{ `
-    
+            <style global jsx>{`
                 body {
                     font-family: 'Open sans', sans-serif;
                     font-size: 16px;
@@ -46,13 +37,13 @@ export default ({ children, title = 'scott.mebberson.codes', ...props }) => {
                     margin: 0;
                     padding: 0;
                 }
-    
+
                 .constrained {
                     margin: 0 auto;
                     width: 80%;
                     max-width: 720px;
                 }
-    
+
                 .align-center {
                     text-align: center;
                 }
@@ -60,7 +51,7 @@ export default ({ children, title = 'scott.mebberson.codes', ...props }) => {
                 .code .icon {
                     position: absolute;
                     left: -25px;
-                    top: 5px
+                    top: 5px;
                 }
 
                 .code.with-runkit .icon {
@@ -68,17 +59,13 @@ export default ({ children, title = 'scott.mebberson.codes', ...props }) => {
                 }
 
                 .code .icon.good {
-                    color: #89C472;
+                    color: #89c472;
                 }
 
                 .code .icon.bad {
-                    color: #FC6C85;
+                    color: #fc6c85;
                 }
-    
-            ` }</style>
-            
+            `}</style>
         </>
-    
-    )
-
+    );
 };

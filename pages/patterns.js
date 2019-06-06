@@ -5,15 +5,10 @@ import Teaser from '../components/Teaser';
 import { javascript, react } from '../lib/colours';
 
 const Patterns = () => (
-
     <Layout>
-
         <div className="constrained">
-
             <Columns>
-
                 <Column width="100%">
-
                     <Teaser
                         color={react}
                         href="/patterns/react"
@@ -25,15 +20,10 @@ const Patterns = () => (
                         href="/patterns/javascript"
                         title="JavaScript"
                     />
-
                 </Column>
-
             </Columns>
-
         </div>
-        
     </Layout>
-
 );
 
 export default Patterns;

@@ -1,16 +1,11 @@
-import { borderColor } from '../lib/constants';
-
 export default ({ children, title }) => (
     <div className="bonus">
-        { title &&
-            <h1>{ title }</h1>
-        }
-        <p>{ children }</p>
-        <style jsx>{ `
-
+        {title && <h1>{title}</h1>}
+        <p>{children}</p>
+        <style jsx>{`
             .bonus {
-                background-color: #FAFAFA;
-                padding: .5em;
+                background-color: #fafafa;
+                padding: 0.5em;
             }
 
             .bonus:last-child {
@@ -18,16 +13,15 @@ export default ({ children, title }) => (
             }
 
             h1 {
-                margin: .6em 2em .4em 1.2em;
+                margin: 0.6em 2em 0.4em 1.2em;
                 font-weight: 100;
                 font-size: 1.2em;
             }
 
             p {
-                font-size: .9em;
-                margin: .6em 2em .8em 2em;
+                font-size: 0.9em;
+                margin: 0.6em 2em 0.8em 2em;
             }
-
-        ` }</style>
+        `}</style>
     </div>
 );

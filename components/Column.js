@@ -1,11 +1,7 @@
 export default ({ children, width = 'auto', ...props }) => (
-
-    <div { ...props} >
-
-        { children }
-
-        <style jsx>{ `
-
+    <div {...props}>
+        {children}
+        <style jsx>{`
             div {
                 width: ${width};
             }
@@ -15,9 +11,6 @@ export default ({ children, width = 'auto', ...props }) => (
                     width: 100%;
                 }
             }
-
-        ` }</style>
-
+        `}</style>
     </div>
-
 );

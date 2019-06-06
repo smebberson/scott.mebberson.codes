@@ -5,15 +5,10 @@ import Layout from '../components/Layout';
 import { docker, git, jest, mongodb, react } from '../lib/colours';
 
 const Cheatsheets = () => (
-
     <Layout>
-
         <div className="constrained">
-
             <Columns>
-
                 <Column width="100%">
-
                     <CheatSheetTeaser
                         color={docker}
                         href="/cheat-sheet/docker"
@@ -43,15 +38,10 @@ const Cheatsheets = () => (
                         href="/cheat-sheet/react"
                         title="React"
                     />
-
                 </Column>
-
             </Columns>
-
         </div>
-        
     </Layout>
-
 );
 
 export default Cheatsheets;

@@ -4,14 +4,14 @@ import Inline from '../../components/Inline';
 import { react } from '../../lib/colours';
 
 export default () => (
-    <CheatSheet
-        color={react}
-        title="React"
-    >
-        
+    <CheatSheet color={react} title="React">
         <Cheat
             caption={
-                <><span>Using </span><Inline>// eslint-disable-next-line rule</Inline><span> with react.</span></>
+                <>
+                    <span>Using </span>
+                    <Inline>// eslint-disable-next-line rule</Inline>
+                    <span> with react.</span>
+                </>
             }
             code={`
 { // eslint-disable-next-line operator-linebreak
@@ -21,6 +21,5 @@ export default () => (
             `}
             language="jsx"
         />
-        
     </CheatSheet>
 );

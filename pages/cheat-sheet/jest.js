@@ -3,11 +3,7 @@ import Cheat from '../../components/Cheat';
 import { jest } from '../../lib/colours';
 
 export default () => (
-    <CheatSheet
-        color={jest}
-        title="Jest"
-    >
-        
+    <CheatSheet color={jest} title="Jest">
         <Cheat
             caption="Create a mock function."
             code="const mockFn = jest.fn()"
@@ -31,6 +27,5 @@ export default () => (
             code="expect(mockFn.mockReturnValueOnce(false).mockReturnValue(true);"
             language="javascript"
         />
-        
     </CheatSheet>
 );

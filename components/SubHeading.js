@@ -1,7 +1,4 @@
-import Nav from './Nav';
-
 export default ({ children }) => (
-
     <>
         <h2 className="sub-heading">{children}</h2>
         <style jsx>{`
@@ -12,5 +9,4 @@ export default ({ children }) => (
             }
         `}</style>
     </>
-
 );

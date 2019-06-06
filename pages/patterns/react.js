@@ -5,11 +5,7 @@ import Pattern from '../../components/Pattern';
 import { react } from '../../lib/colours';
 
 export default () => (
-    <Page
-        color={react}
-        title="React"
-    >
-        
+    <Page color={react} title="React">
         <Heading>Conditional rendering</Heading>
 
         <Pattern
@@ -36,13 +32,15 @@ export default () => (
 
         <Pattern
             caption={
-                <span>Because you can't use JSX within a string, wrap the strings in <Inline>span</Inline> components.</span>
+                <span>
+                    Because you can't use JSX within a string, wrap the strings
+                    in <Inline>span</Inline> components.
+                </span>
             }
             code={`
 {<><span>Surround any strings using the</span><Inline>span</Inline><span> component.</span></>}
             `}
             language="jsx"
         />
-        
     </Page>
 );

@@ -1,15 +1,11 @@
 export default ({ children, ...props }) => (
-
-    <code { ...props }>
-
-        { children }
-
-        <style jsx>{ `
-
+    <code {...props}>
+        {children}
+        <style jsx>{`
             code {
                 color: deepPink;
                 font-family: Menlo, Monaco, monospace, serif;
-                font-size: .9em;
+                font-size: 0.9em;
             }
 
             code::before {
@@ -19,9 +15,6 @@ export default ({ children, ...props }) => (
             code::after {
                 content: '\`';
             }
-
-        ` }</style>
-
+        `}</style>
     </code>
-
 );
