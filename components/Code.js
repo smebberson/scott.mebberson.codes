@@ -1,8 +1,8 @@
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
-import bash from 'react-syntax-highlighter/dist/languages/prism/bash';
-import jsx from 'react-syntax-highlighter/dist/languages/prism/jsx';
-import javascript from 'react-syntax-highlighter/dist/languages/prism/javascript';
-import style from 'react-syntax-highlighter/dist/styles/prism/atom-dark';
+import bash from 'react-syntax-highlighter/dist/cjs/languages/prism/bash';
+import jsx from 'react-syntax-highlighter/dist/cjs/languages/prism/jsx';
+import javascript from 'react-syntax-highlighter/dist/cjs/languages/prism/javascript';
+import style from 'react-syntax-highlighter/dist/cjs/styles/prism/atom-dark';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsDown, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import RunKit from 'react-runkit';

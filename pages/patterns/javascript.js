@@ -76,5 +76,52 @@ multiply(10, 0)
             rating="good"
             runkit
         />
+
+        <SubHeading>Promise catch-error pattern</SubHeading>
+
+        <p>
+            Use the promise catch-error pattern to receive an{' '}
+            <Inline>[error, result]</Inline> tuple removing the need for
+            try/catch blocks.
+        </p>
+
+        <Pattern
+            caption="The error is automatically captured and the promise rejected, producing a single point for error handling and improving code readability."
+            code={`
+const catchError = (p) =>
+    new Promise((resolve) =>
+        p
+            .then((result) => resolve([null, result]))
+            .catch((err) => resolve([err, null]))
+    );
+
+const multiply = (a = 1, b = 1) => new Promise((resolve) => {
+
+    if (a === 0 || b === 0) {
+        throw new Error(\`You can't multiple by zero.\`);
+    }
+    
+    return resolve(a * b);
+
+});
+
+(async () => {
+    
+    const [err, result] = await catchError(multiply(10, 0));
+            
+    if (err) {
+        return console.error(\`An error was captured $\{err}\`);
+    }
+
+    console.log(\`The result is $\{result}\`);
+                
+})();
+
+// Outputs "An error was captured Error: You can't multiple by zero."
+            `}
+            language="javascript"
+            rating="good"
+            runkit
+        />
     </Page>
 );

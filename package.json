@@ -29,7 +29,7 @@
     "react": "16.8.4",
     "react-dom": "16.8.4",
     "react-runkit": "0.9.0",
-    "react-syntax-highlighter": "10.2.1"
+    "react-syntax-highlighter": "11.0.2"
   },
   "devDependencies": {
     "npm-run-all": "4.1.5",
