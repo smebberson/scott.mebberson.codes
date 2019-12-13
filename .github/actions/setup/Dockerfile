@@ -1,4 +1,4 @@
-FROM smebberson/alpine-nodejs:8.1.0
+FROM smebberson/alpine-nodejs:8.15.0
 
 LABEL "repository"="https://github.com/smebberson/scott.mebberson.codes"
 LABEL "homepage"="https://github.com/smebberson/scott.mebberson.codes"

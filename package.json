@@ -9,9 +9,9 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev -p 4040",
-    "action:next:build": "docker build --tag smc-next:latest actions/next",
-    "action:publish:build": "docker build --tag smc-publish:latest actions/publish",
-    "action:setup:build": "docker build --tag smc-setup:latest actions/setup",
+    "action:next:build": "docker build --tag smc-next:latest .github/actions/next",
+    "action:publish:build": "docker build --tag smc-publish:latest .github/actions/publish",
+    "action:setup:build": "docker build --tag smc-setup:latest .github/actions/setup",
     "export": "next export",
     "serve": "serve -p 4040 ./out",
     "workflow": "yarn run-s workflow:step:build workflow:step:export workflow:step:publish",
