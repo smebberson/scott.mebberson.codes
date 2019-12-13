@@ -1,4 +1,3 @@
-
 # Next.js cli action
 
 This GitHub action wraps the Next.js cli to be used as a GitHub action. You can use it within a GitHub action to run a Next.js command:
