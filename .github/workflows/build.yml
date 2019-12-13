@@ -12,3 +12,5 @@ jobs:
               uses: ./.github/actions/setup
             - name: Build
               uses: ./.github/actions/next
+              with:
+                  args: build
