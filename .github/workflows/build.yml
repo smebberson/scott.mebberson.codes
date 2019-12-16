@@ -34,3 +34,5 @@ jobs:
               uses: ./.github/actions/next
               with:
                   args: export
+            - name: Publish
+              uses: ./.github/actions/publish
