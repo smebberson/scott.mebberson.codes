@@ -6,16 +6,19 @@ jobs:
         name: Build
         runs-on: ubuntu-latest
         steps:
-            - name: Branch
-              run: echo ${{github.ref}}
             - name: Checkout
               uses: actions/checkout@v1
-            - name: Setup
-              uses: ./.github/actions/setup
+            - name: Setup Node.js
+              uses: actions/setup-node@v1
+            - name: Setup yarn
+              run: yarn install
             - name: Build
-              uses: ./.github/actions/next
+              run: yarn next build
+            - name: Archive build files
+              uses: actions/upload-artifact@v1
               with:
-                  args: build
+                  name: next
+                  path: .next
     deploy:
         if: github.ref == 'refs/heads/actions-update'
         name: Deploy
@@ -24,15 +27,31 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v1
-            - name: Setup
-              uses: ./.github/actions/setup
-            - name: Build
-              uses: ./.github/actions/next
+            - name: Setup Node.js
+              uses: actions/setup-node@v1
+            - name: Setup Yarn
+              run: yarn install
+            - name: Download build files
+              uses: actions/download-artifact@v1
               with:
-                  args: build
+                  name: next
+                  path: .next
+            - name: Setup Git
+              env:
+                  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+              run: |
+                  git config --local credential.helper store
+                  git config --local user.email "scott@scottmebberson.com"
+                  git config --local user.name "Scott Mebberson"
+                  echo "https://$GITHUB_ACTOR:$GH_TOKEN@github.com/$GITHUB_REPOSITORY.git" > $HOME/.git-credentials
+                  git worktree add out gh-pages
             - name: Export
-              uses: ./.github/actions/next
-              with:
-                  args: export
+              run: yarn next export
             - name: Publish
-              uses: ./.github/actions/publish
+              run: |
+                  cp CNAME ./out
+                  cd ./out
+                  touch .nojekyll
+                  git add .
+                  git commit -m "Deploying commit $GITHUB_SHA to gh-pages 🚀"
+                  git push origin gh-pages

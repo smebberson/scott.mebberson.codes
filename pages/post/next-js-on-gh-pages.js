@@ -62,7 +62,7 @@ export default withPostProps(({ post }) => (
                 </li>
 
                 <li>
-                    We'll alias the <Inline>out</Inline> directory to a{' '}
+                    We'll alias the <Inline>out</Inline> directory to the{' '}
                     <Inline>gh-pages</Inline> branch.
                 </li>
 

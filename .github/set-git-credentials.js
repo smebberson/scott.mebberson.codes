@@ -1,5 +1,3 @@
-#!/usr/bin/with-contenv /usr/bin/node
-
 'use strict';
 
 const fs = require('fs');
@@ -13,6 +11,8 @@ const remoteWithCredentials = remote.replace(
     'https://',
     `https://smebberson:${GH_TOKEN}@`
 );
+
+console.log('remote is ', remoteWithCredentials);
 
 fs.writeFile(file, remoteWithCredentials, (err) => {
     if (err) {
