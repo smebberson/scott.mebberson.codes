@@ -6,6 +6,8 @@ jobs:
         name: Build
         runs-on: ubuntu-latest
         steps:
+            - name: Branch
+              run: echo ${{github.ref}}
             - name: Checkout
               uses: actions/checkout@v1
             - name: Setup
@@ -14,3 +16,21 @@ jobs:
               uses: ./.github/actions/next
               with:
                   args: build
+    deploy:
+        if: github.ref == 'refs/heads/actions-update'
+        name: Deploy
+        needs: [build]
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v1
+            - name: Setup
+              uses: ./.github/actions/setup
+            - name: Build
+              uses: ./.github/actions/next
+              with:
+                  args: build
+            - name: Export
+              uses: ./.github/actions/next
+              with:
+                  args: export
