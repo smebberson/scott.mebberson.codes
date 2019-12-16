@@ -1,6 +1,7 @@
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 
 import { bash } from '../../lib/languages';
+import { style } from '../../lib/style';
 import withPostProps from '../../lib/with-post-props';
 import Bonus from '../../components/Bonus';
 import External from '../../components/External';
