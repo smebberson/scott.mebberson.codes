@@ -34,23 +34,7 @@ To add more content, follow the steps for development, then:
 
 To publish new content simply push to `master`. The GitHub Actions within this repository will kick-in and build, export and commit on the `gh-pages` branch.
 
-See [GitHub Actions](#github-actions) and [Hosting](#hosting) for more information.
-
-## GitHub Actions
-
-To develop and test the GitHub Actions, do the following:
-
--   Execute `rm -rf ./next` to remove the `.next` directory.
--   Execute `rm -rf ./node_modules` to remove the `node_modules` directory.
--   Execute `yarn workflow:step:setup` to build `node_modules` in the context of Linux.
--   Execute `yarn workflow` to run the entire workflow (other than the setup step).
-
-You need to execute `yarn workflow:step:setup` to ensure `node_modules` is setup within the environment that will use them in subsequent steps (i.e. Alpine Linux).
-
-When you're finished developing the GitHub Actions, do the following:
-
--   Execute `rm -rf ./node_modules`.
--   Execute `yarn` to build `node_modules` in the context of your host.
+See [Hosting](#hosting) for more information.
 
 ## Hosting
 

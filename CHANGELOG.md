@@ -2,9 +2,13 @@
 
 This changelog represents changes to the website code, not the content.
 
+## 2019-12-18
+
+-   Completely rewrote the GitHub Actions workflow.
+-   Removed some dependencies that were no longer being used.
+
 ## 2019-12-13
 
--   Added the promise catch-error pattern.
 -   Upgraded react-syntax-highlighter.
 
 ## 2019-06-06
