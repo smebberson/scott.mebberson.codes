@@ -37,7 +37,7 @@ jobs:
                   name: next
                   path: .next
     deploy:
-        if: github.ref == 'refs/heads/actions-update'
+        if: github.ref == 'refs/heads/master'
         name: Deploy
         needs: [build]
         runs-on: ubuntu-latest
