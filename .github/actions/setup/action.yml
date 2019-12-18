@@ -1,9 +1,0 @@
-author: Scott Mebberson
-branding:
-    icon: settings
-    color: purple
-description: 'Setup the repository ready for future GitHub Actions.'
-name: Setup
-runs:
-    using: 'docker'
-    image: 'Dockerfile'

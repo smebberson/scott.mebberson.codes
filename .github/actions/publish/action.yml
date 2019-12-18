@@ -1,9 +1,0 @@
-author: Scott Mebberson
-branding:
-    icon: copy
-    color: purple
-description: 'Publish the out directory to the gh-pages branch.'
-name: GitHub Pages publish
-runs:
-    using: 'docker'
-    image: 'Dockerfile'

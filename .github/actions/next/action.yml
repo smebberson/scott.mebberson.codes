@@ -1,9 +1,0 @@
-author: Scott Mebberson
-branding:
-    icon: book
-    color: orange
-description: 'Use Yarn in a GitHub action.'
-name: Next
-runs:
-    using: 'docker'
-    image: 'Dockerfile'
