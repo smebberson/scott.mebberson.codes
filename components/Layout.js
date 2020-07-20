@@ -52,6 +52,7 @@ export default ({ children, title = 'scott.mebberson.codes', ...props }) => {
                     position: absolute;
                     left: -25px;
                     top: 5px;
+                    width: 1em;
                 }
 
                 .code.with-runkit .icon {

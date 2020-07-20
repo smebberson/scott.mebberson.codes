@@ -6,6 +6,7 @@ This changelog represents changes to the website code, not the content.
 
 -   Removed posts.
 -   Updated the teaser styling.
+-   Fixed icon styling issues.
 
 ## 2019-12-18
 
