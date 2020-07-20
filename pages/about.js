@@ -6,7 +6,7 @@ export default () => (
         <PageTitle emojis="👨‍💻">About</PageTitle>
 
         <div className="constrained">
-            <p>Hey, I'm Scott 👋.</p>
+            <p>Hey 👋.</p>
             <p>
                 If you want to read more about me, as opposed to this website,
                 head over to{' '}
@@ -15,16 +15,11 @@ export default () => (
                 </a>
                 .
             </p>
-            <p>So, this site...</p>
             <p>
-                It's simple,{' '}
-                <a href="mailto:scott+codes@scottmebberson.com">
-                    ask me a question
-                </a>
-                , and if I think I can answer it with any value, I'll respond
-                with a blog post. In the absence of questions from readers, I'll
-                answer a question of my own.
+                This site is a collection of articles, cheat sheets and patterns
+                that I use when developing.
             </p>
+            <p>They're documented here so I can easily remember them.</p>
         </div>
     </Layout>
 );
