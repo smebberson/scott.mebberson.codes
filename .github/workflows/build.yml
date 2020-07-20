@@ -88,4 +88,4 @@ jobs:
                   touch .nojekyll
                   git add .
                   git commit -m "Deploying commit $GITHUB_SHA to gh-pages 🚀"
-                  git push origin gh-pages
+                  git push --force origin gh-pages
