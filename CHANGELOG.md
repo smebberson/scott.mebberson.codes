@@ -2,6 +2,10 @@
 
 This changelog represents changes to the website code, not the content.
 
+## 2020-07-20
+
+-   Removed posts.
+
 ## 2019-12-18
 
 -   Completely rewrote the GitHub Actions workflow.

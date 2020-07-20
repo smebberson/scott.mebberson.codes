@@ -7,18 +7,6 @@ export default () => (
         <nav>
             <ul>
                 <li>
-                    <Link href="/">
-                        <a>Home</a>
-                    </Link>
-                </li>
-
-                <li>
-                    <Link href="/posts">
-                        <a>Posts</a>
-                    </Link>
-                </li>
-
-                <li>
                     <Link href="/cheat-sheets">
                         <a>Cheat Sheets</a>
                     </Link>
