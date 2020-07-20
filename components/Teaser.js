@@ -24,10 +24,10 @@ export default ({ color = '#9400D3', href, title }) => {
                 }
 
                 h1 {
-                    font-family: 'Bungee', sans-serif;
                     font-size: 2em;
                     margin: 0.1em 0px 0.3em 0px;
                     text-align: left;
+                    text-transform: uppercase;
                 }
 
                 h1 a {

@@ -5,6 +5,7 @@ This changelog represents changes to the website code, not the content.
 ## 2020-07-20
 
 -   Removed posts.
+-   Updated the teaser styling.
 
 ## 2019-12-18
 

@@ -20,6 +20,16 @@ export default () => (
                 that I use when developing.
             </p>
             <p>They're documented here so I can easily remember them.</p>
+            <p>
+                The content is mine, but the{' '}
+                <a
+                    href="https://github.com/smebberson/scott.mebberson.codes"
+                    target="_blank"
+                >
+                    source code for the website itself is open source
+                </a>
+                .
+            </p>
         </div>
     </Layout>
 );
