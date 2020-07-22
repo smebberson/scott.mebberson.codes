@@ -5,6 +5,7 @@ This changelog represents changes to the website code, not the content.
 ## 2020-07-22
 
 -   Updated icon styling to be used in more places.
+-   Updated the GitHub Actions workflow to move the Git worktree out of the main worktree (this avoids error messages due to `out` being in `.gitignore`).
 
 ## 2020-07-20
 

@@ -78,13 +78,15 @@ jobs:
                   git config --local user.email "scott@scottmebberson.com"
                   git config --local user.name "Scott Mebberson"
                   echo "https://$GITHUB_ACTOR:$GH_TOKEN@github.com/$GITHUB_REPOSITORY.git" > $HOME/.git-credentials
-                  git worktree add out gh-pages
+                  git worktree add $HOME/smc-out gh-pages
             - name: Export
               run: yarn next export
             - name: Publish
               run: |
-                  cp CNAME ./out
-                  cd ./out
+                  rm -rf $HOME/smc-out/*
+                  cp CNAME $HOME/smc-out
+                  cp -rf out/* $HOME/smc-out
+                  cd $HOME/smc-out
                   touch .nojekyll
                   git add .
                   git commit -m "Deploying commit $GITHUB_SHA to gh-pages 🚀"
