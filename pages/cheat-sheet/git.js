@@ -27,5 +27,15 @@ export default () => (
             caption="Delete a git tag on a remote server."
             code="$ git push --delete origin <tag>"
         />
+
+        <Cheat
+            caption="Create another version of the repository in another location."
+            code="$ git worktree add ../new-location branch-name"
+        />
+
+        <Cheat
+            caption="Remove a worktree."
+            code="$ git worktree remove -f ../new-location"
+        />
     </CheatSheet>
 );
