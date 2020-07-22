@@ -48,23 +48,26 @@ export default ({ children, title = 'scott.mebberson.codes', ...props }) => {
                     text-align: center;
                 }
 
+                .icon {
+                    width: 1em;
+                }
+
+                .icon.good {
+                    color: #89c472;
+                }
+
+                .icon.bad {
+                    color: #fc6c85;
+                }
+
                 .code .icon {
                     position: absolute;
                     left: -25px;
                     top: 5px;
-                    width: 1em;
                 }
 
                 .code.with-runkit .icon {
                     left: -40px;
-                }
-
-                .code .icon.good {
-                    color: #89c472;
-                }
-
-                .code .icon.bad {
-                    color: #fc6c85;
                 }
             `}</style>
         </>

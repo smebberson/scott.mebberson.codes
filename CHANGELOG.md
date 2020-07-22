@@ -2,6 +2,10 @@
 
 This changelog represents changes to the website code, not the content.
 
+## 2020-07-22
+
+-   Updated icon styling to be used in more places.
+
 ## 2020-07-20
 
 -   Removed posts.

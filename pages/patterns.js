@@ -2,7 +2,7 @@ import Column from '../components/Column';
 import Columns from '../components/Columns';
 import Layout from '../components/Layout';
 import Teaser from '../components/Teaser';
-import { javascript, react } from '../lib/colours';
+import { html, javascript, react } from '../lib/colours';
 
 const Patterns = () => (
     <Layout>
@@ -20,6 +20,8 @@ const Patterns = () => (
                         href="/patterns/javascript"
                         title="JavaScript"
                     />
+
+                    <Teaser color={html} href="/patterns/spa" title="SPA" />
                 </Column>
             </Columns>
         </div>
