@@ -28,6 +28,16 @@ export default () => (
             language="jsx"
         />
 
+        <Pattern
+            caption="Conditional rendering."
+            code={`
+{ caption && <p>{caption}</p> ||
+    <p>Default caption.</p>
+}
+            `}
+            language="jsx"
+        />
+
         <Heading>JSX</Heading>
 
         <Pattern
@@ -40,6 +50,52 @@ export default () => (
             code={`
 {<><span>Surround any strings using the</span><Inline>span</Inline><span> component.</span></>}
             `}
+            language="jsx"
+        />
+
+        <Heading>Dynamic tag names</Heading>
+
+        <Pattern
+            code={`
+import { Constrained, Expanded } from './components';
+
+const Wrapper = ({ children, useExpandedView, ...props }) => {
+    const components = {
+        true: Expanded,
+        false: Constrained,
+    };
+
+    const Tag = components[useExpandedView];
+
+    return <Tag {...props}>{children}</Tag>;
+};
+
+export default () => {
+    const [useExpandedView, setUseExpandedView] = useState(false);
+
+    return (
+        <div>
+            <button
+                onClick={() => {
+                    setUseExpandedView(!useExpandedView);
+                }}
+            >
+                {useExpandedView ? 'Shrink' : 'Expand'}
+            </button>
+            <Wrapper useExpandedView={useExpandedView}>
+                <p>Content to wrap.</p>
+            </Wrapper>
+        </div>
+    );
+};
+
+            `}
+            caption={
+                <span>
+                    Wrap children with a particular parent, based on a
+                    condition.
+                </span>
+            }
             language="jsx"
         />
     </Page>
