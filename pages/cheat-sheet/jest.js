@@ -24,7 +24,7 @@ export default () => (
 
         <Cheat
             caption="Set the return value of the mock function."
-            code="expect(mockFn.mockReturnValueOnce(false).mockReturnValue(true);"
+            code="expect(mockFn.mockReturnValueOnce(false).mockReturnValue(true));"
             language="javascript"
         />
     </CheatSheet>
