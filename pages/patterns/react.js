@@ -53,6 +53,17 @@ export default () => (
             language="jsx"
         />
 
+        <Pattern
+            caption={<span>Optionally pass props to components.</span>}
+            code={`
+export default () => {
+    const [fixToTop, setFixToTop] = useState(false);
+    return <Nav { ...(fixToTop && { style: { top: '0px' } }) } />
+}
+            `}
+            language="jsx"
+        />
+
         <Heading>Dynamic tag names</Heading>
 
         <Pattern
