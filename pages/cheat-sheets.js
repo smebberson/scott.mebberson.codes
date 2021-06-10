@@ -2,7 +2,7 @@ import CheatSheetTeaser from '../components/CheatSheetTeaser';
 import Column from '../components/Column';
 import Columns from '../components/Columns';
 import Layout from '../components/Layout';
-import { docker, git, jest, mongodb, react } from '../lib/colours';
+import { docker, git, jest, mongodb, network, react } from '../lib/colours';
 
 const Cheatsheets = () => (
     <Layout>
@@ -31,6 +31,12 @@ const Cheatsheets = () => (
                         color={mongodb}
                         href="/cheat-sheet/mongodb"
                         title="MongoDB"
+                    />
+
+                    <CheatSheetTeaser
+                        color={network}
+                        href="/cheat-sheet/network"
+                        title="Network"
                     />
 
                     <CheatSheetTeaser
