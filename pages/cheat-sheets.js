@@ -2,7 +2,15 @@ import CheatSheetTeaser from '../components/CheatSheetTeaser';
 import Column from '../components/Column';
 import Columns from '../components/Columns';
 import Layout from '../components/Layout';
-import { docker, git, jest, mongodb, network, react } from '../lib/colours';
+import {
+    docker,
+    git,
+    jest,
+    kubernetes,
+    mongodb,
+    network,
+    react,
+} from '../lib/colours';
 
 const Cheatsheets = () => (
     <Layout>
@@ -25,6 +33,12 @@ const Cheatsheets = () => (
                         color={jest}
                         href="/cheat-sheet/jest"
                         title="Jest"
+                    />
+
+                    <CheatSheetTeaser
+                        color={kubernetes}
+                        href="/cheat-sheet/kubernetes"
+                        title="Kubernetes"
                     />
 
                     <CheatSheetTeaser
