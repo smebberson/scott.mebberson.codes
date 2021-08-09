@@ -44,7 +44,7 @@ const Cheatsheets = () => (
                     <CheatSheetTeaser
                         color={mongodb}
                         href="/cheat-sheet/mongodb"
-                        title="MongoDB"
+                        title="MongoDB Shell"
                     />
 
                     <CheatSheetTeaser
