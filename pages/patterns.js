@@ -2,13 +2,18 @@ import Column from '../components/Column';
 import Columns from '../components/Columns';
 import Layout from '../components/Layout';
 import Teaser from '../components/Teaser';
-import { html, javascript, react } from '../lib/colours';
+import { cloudflare, html, javascript, react } from '../lib/colours';
 
 const Patterns = () => (
     <Layout>
         <div className="constrained">
             <Columns>
                 <Column width="100%">
+                    <Teaser
+                        color={cloudflare}
+                        href="/patterns/cloudflare"
+                        title="Cloudflare"
+                    />
                     <Teaser
                         color={react}
                         href="/patterns/react"
