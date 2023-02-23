@@ -3,73 +3,37 @@ on: [push]
 
 jobs:
     build:
+        if: ${{ github.ref != 'refs/heads/master' }}
         name: Build
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
-              uses: actions/checkout@v1
+              uses: actions/checkout@v3
             - name: Setup Node.js
-              uses: actions/setup-node@v1
-            - name: Get yarn cache
-              id: yarn-cache
-              run: echo "::set-output name=dir::$(yarn cache dir)"
-            - name: Cache yarn
-              uses: actions/cache@v1
+              uses: actions/setup-node@v3
               with:
-                  path: ${{ steps.yarn-cache.outputs.dir }}
-                  key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-                  restore-keys: |
-                      ${{ runner.os }}-yarn-
-            - name: Cache node_modules
-              uses: actions/cache@v1
-              with:
-                  path: node_modules
-                  key: ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}
-                  restore-keys: |
-                      ${{ runner.os }}-node_modules-
+                  node-version: 16
             - name: Setup yarn
               run: yarn install
             - name: Build
               run: yarn next build
-            - name: Archive .next
-              uses: actions/upload-artifact@v1
-              with:
-                  name: next
-                  path: .next
     deploy:
-        if: github.ref == 'refs/heads/master'
+        if: ${{ github.ref == 'refs/heads/master' }}
         name: Deploy
-        needs: [build]
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
-              uses: actions/checkout@v1
+              uses: actions/checkout@v3
+              with:
+                  fetch-depth: 0
             - name: Setup Node.js
-              uses: actions/setup-node@v1
-            - name: Get yarn cache
-              id: yarn-cache
-              run: echo "::set-output name=dir::$(yarn cache dir)"
-            - name: Cache yarn
-              uses: actions/cache@v1
+              uses: actions/setup-node@v3
               with:
-                  path: ${{ steps.yarn-cache.outputs.dir }}
-                  key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-                  restore-keys: |
-                      ${{ runner.os }}-yarn-
-            - name: Cache node_modules
-              uses: actions/cache@v1
-              with:
-                  path: node_modules
-                  key: ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}
-                  restore-keys: |
-                      ${{ runner.os }}-node_modules-
+                  node-version: 16
             - name: Setup Yarn
               run: yarn install
-            - name: Download .next
-              uses: actions/download-artifact@v1
-              with:
-                  name: next
-                  path: .next
+            - name: Build
+              run: yarn next build
             - name: Setup Git
               env:
                   GH_TOKEN: ${{ secrets.GH_TOKEN }}
