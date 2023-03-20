@@ -10,6 +10,7 @@ import {
     mongodb,
     network,
     react,
+    redis,
     shell,
 } from '../lib/colours';
 
@@ -58,6 +59,12 @@ const Cheatsheets = () => (
                         color={react}
                         href="/cheat-sheet/react"
                         title="React"
+                    />
+
+                    <CheatSheetTeaser
+                        color={redis}
+                        href="/cheat-sheet/redis"
+                        title="Redis"
                     />
 
                     <CheatSheetTeaser
